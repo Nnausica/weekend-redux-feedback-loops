@@ -9,6 +9,7 @@ import Supported from '../Supported/Supported'
 import Comments from '../Comments/Comments'
 import ThankYou from '../ThankYou/ThankYou'
 import Review from '../Review/Review'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 
 function App() {
 
@@ -23,12 +24,24 @@ function App() {
         <p>{JSON.stringify(feedback)}</p>
       </header>
       <body>
-        <Feeling/>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Feeling/>}></Route>
+          <Route path='/understanding' element={<Understanding/>}></Route>
+          <Route path='/support' element={<Supported/>}></Route>
+          <Route path='/comments' element={<Comments/>}></Route>
+          <Route path='/review' element={<Review/>}></Route>
+          <Route path='/thanks' element={<ThankYou/>}></Route>
+        </Routes>
+      </BrowserRouter>
+
+    {/* used to test to ensure elements were showing on the main page */}
+        {/* <Feeling/>
         <Understanding/>
         <Supported/>
         <Comments/>
         <ThankYou/>
-        <Review/>
+        <Review/> */}
       </body>
     </div>
   );

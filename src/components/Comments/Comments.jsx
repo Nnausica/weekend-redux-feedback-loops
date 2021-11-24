@@ -18,17 +18,12 @@ function Comments(){
     const feedback = useSelector(store=> store.feedback);
 return(
     <div>
-        <header className='App-header'>
-            <h1 className='App-title'>Feedback!</h1>
-            <h4>Don't forget it!</h4>
-            <p>{JSON.stringify(feedback)}</p>
-        </header>
         <p>Any comments you want to leave?</p>
 
         <label for="Comments">Comments:</label>
 
         <input type="text" placeholder="Comments" onChange={(event)=>getComments(event)}></input>
-        <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: Comments})}></button>
+        <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: Comments})}><Link to="/review">Submit</Link></button>
 
     </div>
 )}

@@ -18,11 +18,6 @@ function Feeling(){
 
 return(
     <div>
-        <header className='App-header'>
-            <h1 className='App-title'>Feedback!</h1>
-            <h4>Don't forget it!</h4>
-            <p>{JSON.stringify(feedback)}</p>
-        </header>
         <p>How are you feeling today?</p>
 
         <label for="Feeling">Feeling:</label>
@@ -34,8 +29,8 @@ return(
             <option value={4}>4</option>
             <option value={5}>5</option>
             </select>
-        
-            <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: feeling})}></button>
+            
+            <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: feeling})}><Link to="/understanding">NEXT</Link></button>
 
     </div>
 )}

@@ -11,7 +11,7 @@ return(
     <div>
         <p>ThankYou!</p>
         
-        <button>Leave New Feedback</button>
+        <button><Link to="/">Leave New Feedback!</Link></button>
 
     </div>
 )}

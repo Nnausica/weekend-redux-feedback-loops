@@ -18,11 +18,6 @@ function Understanding(){
 
 return(
     <div>
-        <header className='App-header'>
-            <h1 className='App-title'>Feedback!</h1>
-            <h4>Don't forget it!</h4>
-            <p>{JSON.stringify(feedback)}</p>
-        </header>
         <p>How well are you understanding the content?</p>
 
         <label for="Understanding">Understanding:</label>
@@ -35,7 +30,7 @@ return(
             <option value='5'>5</option>
             </select>
         
-            <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: Understanding})}></button>
+            <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: Understanding})}><Link to="/support">NEXT</Link></button>
     </div>
 )}
 
