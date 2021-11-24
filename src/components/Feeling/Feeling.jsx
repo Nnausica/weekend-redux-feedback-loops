@@ -23,11 +23,11 @@ return(
         <label for="Feeling">Feeling:</label>
 
             <select value={feeling} onChange={(event)=>getFeeling(event)}>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
             </select>
             
             <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: feeling})}><Link to="/understanding">NEXT</Link></button>

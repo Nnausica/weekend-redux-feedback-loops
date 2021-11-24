@@ -11,7 +11,13 @@ import {createStore, combineReducers} from 'redux';
 
 const feedback = (state= [], action)=>{
     if(action.type === 'ADD_FEEDBACK'){
-        return [...state, action.payload];
+        // return [...state, action.payload];
+        console.log('action.payload:', action.payload);
+        // state = action.payload;
+        // console.log('state:', state);
+        // return state;
+        return[...state, action.payload];
+        
     }
     return state
 }
@@ -25,5 +31,5 @@ const storeInstance = createStore(
     )
 )
 
-ReactDOM.render(<Provider store={storeInstance}><App /></Provider>, document.getElementById('root'));
+ReactDOM.render(<Provider store={storeInstance}><App/></Provider>, document.getElementById('root'));
 registerServiceWorker();

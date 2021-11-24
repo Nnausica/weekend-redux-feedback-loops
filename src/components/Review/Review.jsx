@@ -15,6 +15,9 @@ return(
     <div>
         <p>Review your Feedback</p>
         <p>Feeling: {feedback.feeling}</p>
+        <p>Understanding: {feedback.Understanding}</p>
+        <p>Supported: {feedback.Supported}</p>
+        <p>Comments: {feedback.Comments}</p>
         
 
         <button><Link to="/thanks">NEXT</Link></button>

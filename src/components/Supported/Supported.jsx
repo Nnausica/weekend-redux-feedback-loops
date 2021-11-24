@@ -23,11 +23,11 @@ return(
         <label for="Supported">Supported:</label>
 
             <select value={Supported} onChange={(event)=>getSupported(event)}>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
             </select>
         
             <button onClick={()=>dispatch({type:'ADD_FEEDBACK', payload: Supported})}><Link to="/comments">NEXT</Link></button>
