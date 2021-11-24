@@ -8,7 +8,7 @@ function Feeling(){
     // const[name, setName]= useState(null);
     const dispatch = useDispatch();
 
-    const[feeling, newFeeling]= useState(0);
+    const[feeling, newFeeling]= useState(1);
 
     const getFeeling = ()=>{
         console.log('in addFeeling', event.target.value);
@@ -23,6 +23,7 @@ return(
         <label for="Feeling">Feeling:</label>
 
             <select value={feeling} onChange={(event)=>getFeeling(event)}>
+            {/* <option value=""></option> */}
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
