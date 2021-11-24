@@ -18,6 +18,7 @@ function Review(){
         console.log('feedback being posted:', feedback)
 
         axios.post(`/feedback`, feedback).then( (response)=>{
+            //emptys out array in store so fresh feedback can be added
             dispatch({ type: 'EMPTY'});
         }).catch((err)=>{
             alert('error in POST'); 
@@ -27,6 +28,7 @@ function Review(){
 
 return(
     <div>
+        {/* include [i] value with feedback because its an array */}
         <p>Review your Feedback</p>
         <p>Feeling: {feedback[0]}</p>
         <p>Understanding: {feedback[1]}</p>

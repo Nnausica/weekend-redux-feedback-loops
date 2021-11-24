@@ -8,7 +8,7 @@ function Understanding(){
     // const[name, setName]= useState(null);
     const dispatch = useDispatch();
 
-    const[Understanding, newUnderstanding]= useState(0);
+    const[Understanding, newUnderstanding]= useState(1);
 
     const getUnderstanding = ()=>{
         console.log('in addUnderstanding', event.target.value);
@@ -23,7 +23,6 @@ return(
         <label for="Understanding">Understanding:</label>
 
             <select value={Understanding} onChange={(event)=>getUnderstanding(event)}>
-            <option value=""></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>

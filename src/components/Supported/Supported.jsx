@@ -7,8 +7,8 @@ import {Link} from 'react-router-dom';
 function Supported(){
     // const[name, setName]= useState(null);
     const dispatch = useDispatch();
-
-    const[Supported, newSupported]= useState(0);
+    //useState is set to one to work with the drop down, otherwise '0' was being aded for '1' value
+    const[Supported, newSupported]= useState(1);
 
     const getSupported = ()=>{
         console.log('in addSupported', event.target.value);
@@ -23,7 +23,6 @@ return(
         <label for="Supported">Supported:</label>
 
             <select value={Supported} onChange={(event)=>getSupported(event)}>
-            <option value=""></option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
